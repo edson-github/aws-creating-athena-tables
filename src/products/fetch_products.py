@@ -14,8 +14,13 @@ def main():
 
     date = datetime.now()
     path = os.path.join(
-        'products', 'year=' + date.strftime('%Y'), 'month=' + date.strftime('%m'), 'day=' + date.strftime('%d'),
-                    'hour=' + date.strftime('%H'), 'minute=' + date.strftime('%M'), str(uuid4()) + '.json',
+        'products',
+        'year=' + date.strftime('%Y'),
+        'month=' + date.strftime('%m'),
+        'day=' + date.strftime('%d'),
+        'hour=' + date.strftime('%H'),
+        'minute=' + date.strftime('%M'),
+        f'{str(uuid4())}.json',
     )
 
     items = [generate_item(date, i) for i in range(5)]
